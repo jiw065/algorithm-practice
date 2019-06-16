@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Stack;
 
 public class Triangle {
 	public int solution(int[] A) {
@@ -20,7 +21,6 @@ public class Triangle {
     }
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
 	}
 
 }
