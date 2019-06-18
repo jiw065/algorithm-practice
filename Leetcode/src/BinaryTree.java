@@ -1,3 +1,4 @@
+import java.util.Arrays;
 
 public class BinaryTree {
 
@@ -12,11 +13,11 @@ public class BinaryTree {
 	int size;
 	int[] data; 
 	
-	public BinaryTree(int[] data) {
-		size = data.length;
-		root = buildTree(0);
-		this.data = data;
-		
+	public BinaryTree(int[] a) {
+		this.size = a.length;
+		this.data = a.clone();
+		this.root = buildTree(0);
+
 	}	
 	
 	public BinaryTree() {
@@ -29,10 +30,11 @@ public class BinaryTree {
     	if (index >= size) {
     		return null; 
     	}
-    	
-    	TreeNode node = new TreeNode(data[index]);
+    	//{10,9,20,15,35} 
+    	TreeNode node = new TreeNode(this.data[index]);
     	node.left = buildTree(2*index+1);
     	node.right = buildTree(2*index+2);
+    	//return root
     	return node;
     }
     //static Btree
@@ -90,7 +92,15 @@ public class BinaryTree {
 		System.out.println();
 		
 		//dynamic Btree Test 
+		System.out.println("Dynamic Tree");
 
+		int[] test = {10,9,20,15,35};
+		BinaryTree dt = new BinaryTree(test);
+		dt.preTravelTree(dt.root); 
+		System.out.println();
+		dt.inTravelTree(dt.root);
+		System.out.println();
+		dt.postTravelTree(dt.root);
 	}
 
 }
