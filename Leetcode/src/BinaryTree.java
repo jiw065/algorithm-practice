@@ -24,7 +24,7 @@ public class BinaryTree {
 		root = buildTree();		
 	}
 	
-// this is a 'balanced tree'
+// dynamic Btree
     public TreeNode buildTree(int index ) {
     	if (index >= size) {
     		return null; 
@@ -35,7 +35,7 @@ public class BinaryTree {
     	node.right = buildTree(2*index+2);
     	return node;
     }
-    
+    //static Btree
     public TreeNode buildTree() {
     	//¸ù½Úµã-->10
         root = new TreeNode(10);
@@ -80,12 +80,16 @@ public class BinaryTree {
     
 
 	public static void main(String[] args) {
+		// static  Btree test
 		BinaryTree t = new BinaryTree();
 		t.preTravelTree(t.root); 
 		System.out.println();
 		t.inTravelTree(t.root);
 		System.out.println();
 		t.postTravelTree(t.root);
+		System.out.println();
+		
+		//dynamic Btree Test 
 
 	}
 
