@@ -3,7 +3,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class IntersectionTwoArraysSlow {
+public class IntersectionTwoArraysSlowList {
 	 public int[] intersect(int[] nums1, int[] nums2) {
 	        List<Integer> l1 = Arrays.stream(nums1).boxed().collect(Collectors.toList());
 	        List<Integer> l2 = Arrays.stream(nums2).boxed().collect(Collectors.toList());
@@ -25,7 +25,6 @@ public class IntersectionTwoArraysSlow {
 	            }
 	        }
 	        
-	    
 	    return l3.stream().mapToInt(i->i).toArray();    
 	        
 	        
