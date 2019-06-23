@@ -15,7 +15,7 @@ class MinStack {
     
     public void push(int x) {
         if (min >= x ){
-            st.push(min);
+            st.push(min); //add the old min value before adding new element 
             min = x;
             
         }
@@ -24,8 +24,8 @@ class MinStack {
     }
     
     public void pop() {
-        if(st.pop() == min){
-            min = st.pop();
+        if(st.pop() == min){ // removed min value
+            min = st.pop(); // pop(remove) the second min value
         }
     }
     
