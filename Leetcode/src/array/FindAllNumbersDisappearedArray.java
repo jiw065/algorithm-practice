@@ -21,31 +21,25 @@ public class FindAllNumbersDisappearedArray {
 	    
 	    
 	  /*  
-	    public List<Integer> findDisappearedNumbers(int[] nums) {
-	        Arrays.sort(nums);
-	        Set<Integer> hs = new HashSet<>();
-	        List<Integer> list = new ArrayList<>();
-	        for(int i =0; i<nums.length;i++){
-	            hs.add(nums[i]);
-	        }
-	        int n = 1;
-	        int num = 1;
-	        Iterator<Integer> t = hs.iterator();
-	        while(n<=nums.length){
-	        if(t.hasNext()){
-	            int temp =  t.next();
-	            while( temp!= n){
-	                list.add(n);
-	                n++;
-	            }
-	        }else{
-	           list.add(n); 
-	        }
-	            n++;
-	        }
-	        
-	        
-	        return list; 
-	    }
+	   public List<Integer> findDisappearedNumbers(int[] nums) {
+        Set<Integer> hs = new HashSet<>();
+        List<Integer> list = new ArrayList<>();
+        for(int i =0; i<nums.length;i++){
+            hs.add(nums[i]);
+        }
+       
+        for (int index : hs){
+            nums[index-1] = -nums[index-1]; 
+        }
+        
+        
+         for (int i=0 ;i<nums.length;i++){
+            if(nums[i]>0){
+                list.add(i+1);
+            }
+        }
+         
+         return list; 
+    }
 	    */
 }
