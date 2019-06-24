@@ -42,4 +42,25 @@ public class FindAllNumbersDisappearedArray {
          return list; 
     }
 	    */
+	  
+	  
+	  public List<Integer> findDisappearedNumbers2(int[] nums) {
+	        Set<Integer> hs = new HashSet<>();
+	        List<Integer> list = new ArrayList<>();
+	        for(int i =0; i<nums.length;i++){
+	            int ind = Math.abs(nums[i]);
+	            if(hs.add(ind)){
+	                 nums[ind-1] = -nums[ind-1];    
+	            }
+	        }
+	       
+	        
+	         for (int i=0 ;i<nums.length;i++){
+	            if(nums[i]>0){
+	                list.add(i+1);
+	            }
+	        }
+	         
+	         return list; 
+	    }
 }
