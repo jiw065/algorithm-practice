@@ -1,4 +1,4 @@
-package map;
+package math;
 import java.util.HashMap;
 
 public class TwoSum {
@@ -22,4 +22,26 @@ public class TwoSum {
         
         return result; 
     }
+	
+	// find the number but not the index
+    public int[] twoSum2(int[] nums, int target) {
+       int[] result = new int[2]; 
+       int left = 0;
+       int right = nums.length-1;
+       Arrays.sort(nums);
+       while(left < right){
+           if(nums[left]+nums[right]==target){
+               result[0] = nums[left];
+               result[1] = nums[right]; 
+               break;
+           }
+           if (nums[left]+nums[right]<target){
+               left++;
+           }else{
+               right--; 
+           }
+           
+       } 
+        return result; 
+   }
 }
