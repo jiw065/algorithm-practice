@@ -1,4 +1,4 @@
-package algorithemMethod;
+package algorithemMethod.DP;
 
 public class BuyStockUnlimitedTime {
 	// buy sell everyday, count those profit > 0 
