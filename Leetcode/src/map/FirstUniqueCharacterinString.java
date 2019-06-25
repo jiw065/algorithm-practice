@@ -1,5 +1,7 @@
 package map;
 
+import java.util.HashMap;
+
 public class FirstUniqueCharacterinString {
 	 public int firstUniqChar(String s) {
 	        char[] cl = s.toCharArray();
