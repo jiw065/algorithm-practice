@@ -1,4 +1,4 @@
-package queue;
+package queueStack;
 
 public class RevealCardsIncreasingOrder {
 	 public int[] deckRevealedIncreasing(int[] deck) {
