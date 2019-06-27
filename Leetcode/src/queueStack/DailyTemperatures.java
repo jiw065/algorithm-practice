@@ -1,5 +1,8 @@
 package queueStack;
 
+import java.util.Stack;
+
+//[73, 74, 75, 71, 69, 72, 76, 73]
 public class DailyTemperatures {
 	 // brute force
     public int[] dailyTemperatures1(int[] T) {
@@ -31,7 +34,9 @@ public class DailyTemperatures {
             return days; 
         } 
         Stack<Integer> temp = new Stack<>();
-        for (int i= 0; i<T.length;i++){       
+        // store the index into the stack
+        for (int i= 0; i<T.length;i++){     
+        	// if the temp is higher keep pop the elements
             while(!temp.isEmpty() && T[i] > T[temp.peek()]){
                 int index = temp.pop();
                 days[index] = i-index;
