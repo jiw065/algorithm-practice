@@ -67,9 +67,7 @@ public class ThreeSum {
                     List<Integer> sub = new ArrayList<>();
                     sub.add(nums[i]);
                     sub.add(nums[left]);
-                    sub.add(nums[right]);
-                    Collections.sort(sub);
-     
+                    sub.add(nums[right]);     
                     hans.add(sub);
 
                     right--;
