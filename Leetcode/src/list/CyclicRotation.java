@@ -1,4 +1,4 @@
-package list;
+package Leetcode.src.list;
 import java.util.Deque;
 import java.util.LinkedList;
 

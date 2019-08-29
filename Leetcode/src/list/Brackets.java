@@ -1,4 +1,4 @@
-package list;
+package Leetcode.src.list;
 import java.util.Stack;
 
 public class Brackets {

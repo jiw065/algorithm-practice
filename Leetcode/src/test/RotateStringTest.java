@@ -1,8 +1,7 @@
 package Leetcode.src.test;
 
 import Leetcode.src.RotateString;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -20,8 +19,8 @@ class RotateStringTest {
     //null
     static Map<String,Boolean> test4 = new HashMap<>();
 
-    @BeforeAll
-    static void setupTestCase(){
+   @BeforeAll
+    static void setupTestCa(){
         //test1: abced
         test1.put("cdeab",true);
         test1.put("abced",false);

@@ -1,4 +1,4 @@
-package twoPointers;
+package Leetcode.src.twoPointers;
 
 public class LinkedListCycle {
 	public boolean hasCycle2(ListNode head) {

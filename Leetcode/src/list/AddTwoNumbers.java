@@ -1,7 +1,6 @@
-package list;
+package Leetcode.src.list;
 
-public class AddTwoNumbers {
-	class Solution {
+class AddTwoNumbers  {
 	    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
 	       if (l1 == null && l2==null){
 	           return null; 
@@ -47,9 +46,7 @@ public class AddTwoNumbers {
 	           
 	           
 	        }
-	        
-	        
-	       
+
 	        return node; 
 	        
 	    }
